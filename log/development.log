@@ -4242,3 +4242,850 @@ Processing by RailsAdmin::MainController#dashboard as HTML
 Completed 200 OK in 764ms (Views: 716.3ms | ActiveRecord: 6.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-21 16:02:49 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 122ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-21 16:02:49 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 2697ms (Views: 2690.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:02:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1" for 127.0.0.1 at 2017-08-21 16:03:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (2.0ms)
+Completed 200 OK in 223ms (Views: 151.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:03:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:03:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/2" for 127.0.0.1 at 2017-08-21 16:03:06 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 171ms (Views: 163.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:03:07 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:03:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 16:07:37 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 2030ms (Views: 1944.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:07:39 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:07:47 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (32.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.8ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 190ms (Views: 163.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at 2017-08-21 16:07:47 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:07:49 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (1.9ms)
+  Rendered jobs/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/var/www/html/Rubyonrails/jobs_board_v2/app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+...r.append=( render 'user_jobs' f: builder );@output_buffer.sa...
+...                               ^):
+  
+app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_54222420'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:08:37 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (1.7ms)
+  Rendered jobs/new.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/var/www/html/Rubyonrails/jobs_board_v2/app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+...end=( render 'user_jobs/form' f: builder );@output_buffer.sa...
+...                               ^):
+  
+app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292542586780'
+Started POST "/__web_console/repl_sessions/d1aa06d162d4f34b893efbeaae643590/trace" for 127.0.0.1 at 2017-08-21 16:08:57 +0200
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:10:07 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.3ms)
+  Rendered jobs/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/var/www/html/Rubyonrails/jobs_board_v2/app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+...er.append=( render 'user_job' f: builder );@output_buffer.sa...
+...                               ^):
+  
+app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292241878140'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:12:17 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (2.4ms)
+  Rendered jobs/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/var/www/html/Rubyonrails/jobs_board_v2/app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+...er.append=( render 'user_job' f: builder );@output_buffer.sa...
+...                               ^):
+  
+app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_60969480'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:13:51 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (1.9ms)
+  Rendered jobs/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/var/www/html/Rubyonrails/jobs_board_v2/app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+...er.append=( render 'user_job' f: builder );@output_buffer.sa...
+...                               ^):
+  
+app/views/jobs/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292308115600'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:14:11 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (3.0ms)
+  Rendered jobs/_form.html.erb (58.8ms)
+  Rendered jobs/new.html.erb within layouts/application (66.8ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Association cannot be used in forms not associated with an object):
+    1: <%= f.association :user %>
+    2: <%= f.association :job %>
+    3: <%= f.association :result %>
+    4: <%= f.association :requirement %>
+  
+app/views/jobs/_user_job.html.erb:1:in `_app_views_jobs__user_job_html_erb___3879162830537272120_70292308410320'
+app/views/jobs/_form.html.erb:12:in `block (2 levels) in _app_views_jobs__form_html_erb___2877591996272219426_70292240406100'
+app/views/jobs/_form.html.erb:11:in `block in _app_views_jobs__form_html_erb___2877591996272219426_70292240406100'
+app/views/jobs/_form.html.erb:1:in `_app_views_jobs__form_html_erb___2877591996272219426_70292240406100'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292240529920'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:14:32 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (24.0ms)
+  Rendered jobs/_form.html.erb (46.4ms)
+  Rendered jobs/new.html.erb within layouts/application (49.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (13.1ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 204ms (Views: 198.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:14:59 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (8.3ms)
+  Rendered jobs/_form.html.erb (30.7ms)
+  Rendered jobs/new.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Association cannot be used in forms not associated with an object):
+    1: <%= f.association :user %>
+    2: <%= f.association :job %>
+    3: <%= f.association :result %>
+    4: <%= f.association :requirement %>
+  
+app/views/jobs/_user_job.html.erb:1:in `_app_views_jobs__user_job_html_erb___3879162830537272120_70292343114340'
+app/views/jobs/_form.html.erb:12:in `block (2 levels) in _app_views_jobs__form_html_erb___2877591996272219426_70292341842000'
+app/views/jobs/_form.html.erb:11:in `block in _app_views_jobs__form_html_erb___2877591996272219426_70292341842000'
+app/views/jobs/_form.html.erb:1:in `_app_views_jobs__form_html_erb___2877591996272219426_70292341842000'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292545660200'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:16:18 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (3.3ms)
+  Rendered jobs/_form.html.erb (21.2ms)
+  Rendered jobs/new.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Association cannot be used in forms not associated with an object):
+    1: <!-- <span><%= f.association :user %>
+    2: <%= f.association :job %>
+    3: <%= f.association :result %>
+    4: <%= f.association :requirement %></span> -->
+  
+app/views/jobs/_user_job.html.erb:1:in `_app_views_jobs__user_job_html_erb___3879162830537272120_63294400'
+app/views/jobs/_form.html.erb:12:in `block (2 levels) in _app_views_jobs__form_html_erb___2877591996272219426_63588240'
+app/views/jobs/_form.html.erb:11:in `block in _app_views_jobs__form_html_erb___2877591996272219426_63588240'
+app/views/jobs/_form.html.erb:1:in `_app_views_jobs__form_html_erb___2877591996272219426_63588240'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_63639280'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:16:20 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (6.6ms)
+  Rendered jobs/_form.html.erb (28.3ms)
+  Rendered jobs/new.html.erb within layouts/application (30.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Association cannot be used in forms not associated with an object):
+    1: <!-- <span><%= f.association :user %>
+    2: <%= f.association :job %>
+    3: <%= f.association :result %>
+    4: <%= f.association :requirement %></span> -->
+  
+app/views/jobs/_user_job.html.erb:1:in `_app_views_jobs__user_job_html_erb___3879162830537272120_70292545361860'
+app/views/jobs/_form.html.erb:12:in `block (2 levels) in _app_views_jobs__form_html_erb___2877591996272219426_70292343332880'
+app/views/jobs/_form.html.erb:11:in `block in _app_views_jobs__form_html_erb___2877591996272219426_70292343332880'
+app/views/jobs/_form.html.erb:1:in `_app_views_jobs__form_html_erb___2877591996272219426_70292343332880'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292343579680'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:16:34 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (26.5ms)
+  Rendered jobs/_form.html.erb (53.4ms)
+  Rendered jobs/new.html.erb within layouts/application (56.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 217ms (Views: 213.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:17:09 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (20.0ms)
+  Rendered jobs/_form.html.erb (34.6ms)
+  Rendered jobs/new.html.erb within layouts/application (36.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No input found for check_box):
+    2: <%= f.input :job %>
+    3: <%= f.input :result %>
+    4: <%= f.input :requirement %></span> -->
+    5: <%= f.input :applied, as: :check_box %>
+    6: <%= f.input :interview, as: :check_box %>
+    7: <%= f.input :shortlist, as: :check_box %>
+    8: <%= f.input :final, as: :check_box %>
+  
+app/views/jobs/_user_job.html.erb:5:in `_app_views_jobs__user_job_html_erb___3879162830537272120_56389840'
+app/views/jobs/_form.html.erb:12:in `block (2 levels) in _app_views_jobs__form_html_erb___2877591996272219426_57401080'
+app/views/jobs/_form.html.erb:11:in `block in _app_views_jobs__form_html_erb___2877591996272219426_57401080'
+app/views/jobs/_form.html.erb:1:in `_app_views_jobs__form_html_erb___2877591996272219426_57401080'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_57609960'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:17:16 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (24.8ms)
+  Rendered jobs/_form.html.erb (43.9ms)
+  Rendered jobs/new.html.erb within layouts/application (46.2ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No input found for checkbox):
+    2: <%= f.input :job %>
+    3: <%= f.input :result %>
+    4: <%= f.input :requirement %></span> -->
+    5: <%= f.input :applied, as: :checkbox %>
+    6: <%= f.input :interview, as: :checkbox %>
+    7: <%= f.input :shortlist, as: :checkbox %>
+    8: <%= f.input :final, as: :checkbox %>
+  
+app/views/jobs/_user_job.html.erb:5:in `_app_views_jobs__user_job_html_erb___3879162830537272120_70292543624080'
+app/views/jobs/_form.html.erb:12:in `block (2 levels) in _app_views_jobs__form_html_erb___2877591996272219426_70292343339820'
+app/views/jobs/_form.html.erb:11:in `block in _app_views_jobs__form_html_erb___2877591996272219426_70292343339820'
+app/views/jobs/_form.html.erb:1:in `_app_views_jobs__form_html_erb___2877591996272219426_70292343339820'
+app/views/jobs/new.html.erb:3:in `_app_views_jobs_new_html_erb___2097946284795886331_70292342573040'
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:18:29 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (27.3ms)
+  Rendered jobs/_form.html.erb (51.1ms)
+  Rendered jobs/new.html.erb within layouts/application (54.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.7ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 240ms (Views: 234.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:18:38 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (24.0ms)
+  Rendered jobs/_form.html.erb (40.4ms)
+  Rendered jobs/new.html.erb within layouts/application (43.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (16.1ms)
+  Rendered layouts/_messages.html.erb (3.4ms)
+Completed 200 OK in 244ms (Views: 238.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-08-21 16:19:24 +0200
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lda/Osq7mlo4QHNNffsUpC0hjIoRiUcmqwhkcz/DOQwCMDYjH1jDLkxDlww4DhW7O3RducUHS1C4AfhfMLhSkQ==", "job"=>{"job_name"=>"zzz", "job_link"=>"zzz", "company_name"=>"zzz", "job_description"=>"zzz"}, "user_jobs"=>{"applied"=>"1", "interview"=>"1", "shortlist"=>"0", "final"=>"0", "reason"=>"zzz"}, "commit"=>"Create Job"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "jobs" ("job_link", "job_name", "company_name", "job_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["job_link", "zzz"], ["job_name", "zzz"], ["company_name", "zzz"], ["job_description", "zzz"], ["created_at", "2017-08-21 14:19:24.553551"], ["updated_at", "2017-08-21 14:19:24.553551"]]
+  [1m[35m (93.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 116ms (ActiveRecord: 97.5ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-08-21 16:19:24 +0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 142ms (Views: 126.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:19:28 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (2.2ms)
+Completed 200 OK in 169ms (Views: 161.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:22:26 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (34.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (71.5ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 306ms (Views: 269.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:22:29 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (28.0ms)
+  Rendered jobs/_form.html.erb (45.7ms)
+  Rendered jobs/new.html.erb within layouts/application (48.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 174ms (Views: 169.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:24:59 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (27.3ms)
+  Rendered jobs/_form.html.erb (81.9ms)
+  Rendered jobs/new.html.erb within layouts/application (86.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (75.1ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 1891ms (Views: 1823.3ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-08-21 16:25:22 +0200
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvdJp+hhPdDwfbAsEJGzUzCmkMZCkz/iWZPkZzP6SGltEcC+PYJkpIR+VG1VZLJMJvNB9ZYdM5RKmnhLPIEj9A==", "job"=>{"job_name"=>"yyy", "job_link"=>"yyy", "company_name"=>"yyy", "job_description"=>"yyy"}, "user_jobs"=>{"applied"=>"1", "interview"=>"1", "shortlist"=>"0", "final"=>"0", "reason"=>"yyy"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("job_link", "job_name", "company_name", "job_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["job_link", "yyy"], ["job_name", "yyy"], ["company_name", "yyy"], ["job_description", "yyy"], ["created_at", "2017-08-21 14:25:22.628244"], ["updated_at", "2017-08-21 14:25:22.628244"]]
+  [1m[35m (97.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/3
+Completed 302 Found in 131ms (ActiveRecord: 100.3ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-08-21 16:25:22 +0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (17.4ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 178ms (Views: 165.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:25:43 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.5ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.5ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (149.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (11.2ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 356ms (Views: 345.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:25:48 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.0ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 156ms (Views: 151.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:25:51 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.4ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (26.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 202ms (Views: 196.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:25:54 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.5ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 166ms (Views: 160.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:26:27 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (2.1ms)
+Completed 200 OK in 186ms (Views: 180.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:26:29 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (38.4ms)
+  Rendered jobs/_form.html.erb (62.9ms)
+  Rendered jobs/new.html.erb within layouts/application (66.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 215ms (Views: 211.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-08-21 16:27:09 +0200
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3jyly8aTxEKjXEYmqV/DrR3c/fXgsCGyGa3mOe9rYpkPPl0Tid5ItmI7BxK1xLRQV+y2+x1B42c2qc3JxOW+vg==", "job"=>{"job_name"=>"abc", "job_link"=>"abc", "company_name"=>"abc", "job_description"=>"abc"}, "user_jobs"=>{"user"=>"1", "job"=>"1", "result"=>"1", "requirement"=>"1", "applied"=>"1", "interview"=>"0", "shortlist"=>"0", "final"=>"0", "reason"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "jobs" ("job_link", "job_name", "company_name", "job_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["job_link", "abc"], ["job_name", "abc"], ["company_name", "abc"], ["job_description", "abc"], ["created_at", "2017-08-21 14:27:09.892081"], ["updated_at", "2017-08-21 14:27:09.892081"]]
+  [1m[35m (102.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/4
+Completed 302 Found in 122ms (ActiveRecord: 105.3ms)
+
+
+Started GET "/jobs/4" for 127.0.0.1 at 2017-08-21 16:27:10 +0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 183ms (Views: 173.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:27:17 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.5ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (8.3ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 178ms (Views: 169.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:28:04 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.4ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.7ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (191.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (10.3ms)
+  Rendered layouts/_messages.html.erb (1.9ms)
+Completed 200 OK in 383ms (Views: 362.6ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:28:06 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (2.0ms)
+Completed 200 OK in 179ms (Views: 174.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-08-21 16:28:08 +0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_user_job.html.erb (32.3ms)
+  Rendered jobs/_form.html.erb (62.2ms)
+  Rendered jobs/new.html.erb within layouts/application (65.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.7ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 253ms (Views: 248.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-08-21 16:28:22 +0200
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lQ+Ifc2C71CjHEY9GaX4wN1jDofulwC9VHc86K+n2XlEDXClgs9jpGJ7BwkFPo89l1NFiRNmwmh7cxcYhCkFXg==", "job"=>{"job_name"=>"aa", "job_link"=>"aa", "company_name"=>"aa", "job_description"=>"aa"}, "user_jobs"=>{"user"=>"aa", "job"=>"aa", "result"=>"aa", "requirement"=>"aaa", "applied"=>"0", "interview"=>"0", "shortlist"=>"1", "final"=>"0", "reason"=>""}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[32mINSERT INTO "jobs" ("job_link", "job_name", "company_name", "job_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["job_link", "aa"], ["job_name", "aa"], ["company_name", "aa"], ["job_description", "aa"], ["created_at", "2017-08-21 14:28:22.363996"], ["updated_at", "2017-08-21 14:28:22.363996"]]
+  [1m[35m (71.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/5
+Completed 302 Found in 86ms (ActiveRecord: 76.0ms)
+
+
+Started GET "/jobs/5" for 127.0.0.1 at 2017-08-21 16:28:22 +0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.8ms)
+  Rendered layouts/_messages.html.erb (2.1ms)
+Completed 200 OK in 190ms (Views: 184.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:28:26 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.6ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.7ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 189ms (Views: 182.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-08-21 16:28:28 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (10.6ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 175ms (Views: 170.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user_jobs" for 127.0.0.1 at 2017-08-21 16:28:29 +0200
+Processing by UserJobsController#index as HTML
+  Rendering user_jobs/index.html.erb within layouts/application
+  [1m[36mUserJob Load (0.5ms)[0m  [1m[34mSELECT "user_jobs".* FROM "user_jobs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered user_jobs/index.html.erb within layouts/application (32.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (5.1ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 193ms (Views: 188.0ms | ActiveRecord: 2.1ms)
+
+

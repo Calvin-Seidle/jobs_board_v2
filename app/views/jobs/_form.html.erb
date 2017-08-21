@@ -7,6 +7,12 @@
     <%= f.input :company_name %>
     <%= f.input :job_description %>
   </div><hr>
+  <div class="fields">
+    <%= simple_fields_for :user_jobs do |builder| %>
+      <%= render 'user_job', f: builder %>
+    <% end %> 
+    <hr>
+  </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
