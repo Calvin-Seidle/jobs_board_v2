@@ -1,0 +1,14 @@
+<%= simple_form_for(@job) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :job_name %>
+    <%= f.input :job_link %>
+    <%= f.input :company_name %>
+    <%= f.input :job_description %>
+  </div><hr>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

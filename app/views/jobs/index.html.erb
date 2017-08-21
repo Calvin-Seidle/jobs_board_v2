@@ -1,0 +1,32 @@
+<h1>Jobs</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Job link</th>
+      <th>Job name</th>
+      <th>Company name</th>
+      <th>Job description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><a href="</a> <%= job.job_link %>"><%= job.job_link %></a> </td>
+        <td><%= job.job_name %></td>
+        <td><%= job.company_name %></td>
+        <td><%= job.job_description %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>
+
