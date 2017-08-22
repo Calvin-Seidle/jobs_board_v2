@@ -15,10 +15,16 @@ class JobsController < ApplicationController
   # GET /jobs/new
   def new
     @job = Job.new
+    #3.times do
+      #@job.user_jobs.build
+    #end
   end
 
   # GET /jobs/1/edit
   def edit
+    #3.times do
+      #@job.user_jobs.build
+    #end
   end
 
   # POST /jobs

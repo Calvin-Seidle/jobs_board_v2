@@ -7,4 +7,10 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def search
+    @users = User.ransack(params[:q]).result(distinct: true)
+    @jobs = Job.ransack(params[:q]).result(distinct: true)
+  	# render json: {users: [], jobs: []}
+  end
 end

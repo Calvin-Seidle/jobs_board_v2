@@ -10,6 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require easy-autocomplete
+ *= require easy-autocomplete.themes
  *= require_tree .
  *= require_self
  */
@@ -20,4 +22,9 @@ body {
 
 .table {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.avatar {
+	height: 100px;
+	width: 100px;
 }

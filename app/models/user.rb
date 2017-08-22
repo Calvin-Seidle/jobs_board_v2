@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :user_jobs
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_attached_file :avatar, styles: { large: "500x500", medium: "300x300>", small: "100x100>", thumb: "50x50>" }, default_url: "/images/:style/missing.png"
@@ -14,4 +13,5 @@ class User < ApplicationRecord
   #     'application/pdf',
   #     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   #     'application/zip']
+
 end

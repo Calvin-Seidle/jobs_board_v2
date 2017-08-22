@@ -1,5 +1,5 @@
 class Result < ApplicationRecord
-	belongs_to :user_jobs
+	has_many :user_jobs
 	def to_s
 		self.result 
 	end

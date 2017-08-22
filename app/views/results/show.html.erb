@@ -1,0 +1,41 @@
+<h1>Results <small><%= @result.result %></small></h1><hr>
+
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>User</th>
+      <th>Job</th>
+      <th>Result</th>
+      <th>Requirement</th>
+      <th>Applied</th>
+      <th>Interview</th>
+      <th>Shortlist</th>
+      <th>Final</th>
+      <th>Reason</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @result.user_jobs.each do |user_job| %>
+      <tr>
+        <td><%= user_job.id %></td>
+        <td><%= user_job.user.name %> <%= user_job.user.surname %></td>
+        <td><%=link_to user_job.job, jobs_path %></td>
+        <td><%= user_job.result %></td>
+        <td><%= user_job.requirement %></td>
+        <td><%= user_job.applied %></td>
+        <td><%= user_job.interview %></td>
+        <td><%= user_job.shortlist %></td>
+        <td><%= user_job.final %></td>
+        <td><%= user_job.reason %></td>
+        <td><%= link_to 'Show', user_job %></td>
+        <td><%= link_to 'Edit', edit_user_job_path(user_job) %></td>
+        <td><%= link_to 'Destroy', user_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>

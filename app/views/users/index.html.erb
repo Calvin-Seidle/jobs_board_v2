@@ -4,9 +4,13 @@
 <div class="col-md-3 col-xs-12" ">
     <div class="thumbnail" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 320px;">
         <div class="caption">
-            <h4 class="text-primary"><%= user.name %> <%= user.surname %></h4><hr>
-            <strong><a href="mailto:<%= user.email %>"><%= user.email %></a></strong><hr>
-            <%= image_tag user.avatar.url(:small), class: "avatar" %>
+            <h4 class="text-muted"><%= user.name %> <%= user.surname %></h4><hr>
+            <strong><a href="mailto:<%= user.email %>"><%= truncate(user.email.html_safe, length: 20) %></a></strong><hr>
+            <% if user.avatar? %>
+                <%= image_tag user.avatar.url(:small), class: "avatar" %>
+            <% else %>
+                <img src="../avatar.gif" alt="No Avatar" class="avatar">
+            <% end %>
             <hr>
             <p>
               <%= link_to "View", user, class: "btn btn-info btn-xs" %>

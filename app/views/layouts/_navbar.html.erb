@@ -15,16 +15,24 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= link_to 'Users', users_path %></li>
           <li><%= link_to 'Jobs', jobs_path %></li>
+          <li><%= link_to 'Results', results_path %></li>
+          <li><%= link_to 'Requirements', requirements_path %></li>
           <li><%= link_to 'User Jobs', user_jobs_path %></li>
+          <li><%= link_to 'Users', users_path %></li>
           <!--  -->
-        <% end %>  
+        <% end %> 
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li><%= link_to 'Admin Dashboard', '/admin' %></li>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-primary"><i class='fa fa-search'></i></button>
+          </form>
+          <li><%= link_to 'Full Admin Dashboard', '/admin' %></li>
           <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
           <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
         <% else %>  

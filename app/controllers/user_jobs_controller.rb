@@ -5,6 +5,7 @@ class UserJobsController < ApplicationController
   # GET /user_jobs.json
   def index
     @user_jobs = UserJob.all
+    #@job = Job.find(params[:id])
   end
 
   # GET /user_jobs/1

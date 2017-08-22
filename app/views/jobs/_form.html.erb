@@ -7,14 +7,19 @@
     <%= f.input :company_name %>
     <%= f.input :job_description %>
   </div><hr>
-  <div class="fields">
-    <%= simple_fields_for :user_jobs do |builder| %>
-      <%= render 'user_job', f: builder %>
+  <div id="user_jobs">
+    <%= f.simple_fields_for :user_jobs do |user_job| %>
+      <%= render 'user_job_fields', :f => user_job %>
     <% end %> 
+  <div class='links'>
+    <%= link_to_add_association 'Add User', f, :user_jobs, class: 'btn btn-info btn-xs' ,partial: 'jobs/user_job_fields' %>
+  </div>
     <hr>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-primary btn-block' %>
   </div>
 <% end %>
+
+

@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>User Jobs</h1>
 
 <table class="table table-hover table-striped">
@@ -24,7 +22,7 @@
       <tr>
         <td><%= user_job.id %></td>
         <td><%= user_job.user.name %> <%= user_job.user.surname %></td>
-        <td><%= user_job.job %></td>
+        <td><%=link_to user_job.job, jobs_path %></td>
         <td><%= user_job.result %></td>
         <td><%= user_job.requirement %></td>
         <td><%= user_job.applied %></td>
