@@ -11,8 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.easy-autocomplete
 //= require rails-ujs
+//= require twitter/bootstrap
+//= require jquery.easy-autocomplete
 //= require cocoon
 //= require turbolinks
 //= require_tree .

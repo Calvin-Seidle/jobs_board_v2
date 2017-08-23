@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+   
   def index
   	if current_user
   		redirect_to users_url
@@ -9,8 +10,16 @@ class HomeController < ApplicationController
   end
 
   def search
-    @users = User.ransack(params[:q]).result(distinct: true)
-    @jobs = Job.ransack(params[:q]).result(distinct: true)
-  	# render json: {users: [], jobs: []}
+    @users = User.ransack(name_cont: params[:q]).result(distinct: true)
+    @jobs = Job.ransack(job_name_cont: params[:q]).result(distinct: true)
+
+    respond_to do |format|
+      format.html {}
+      format.json {
+        @users = @users.limit(5)
+        @jobs = @jobs.limit(5)
+      }
+    end 
   end
+
 end

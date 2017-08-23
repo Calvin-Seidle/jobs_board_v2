@@ -26,12 +26,21 @@
       
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <form class="navbar-form navbar-left" role="search">
+
+          <!-- <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Search" data-behavior='autocomplete'>
             </div>
             <button type="submit" class="btn btn-primary"><i class='fa fa-search'></i></button>
-          </form>
+          </form> -->
+
+          <%= form_with url: search_path, local: true, method: :get, html: {class: "form-inline navbar-form navbar-left"} do |form| %>
+            <div class="form-group">
+              <%= form.text_field :q, placeholder: 'Search', data: { behavior: 'autocomplete'}, class: 'form-control' %>
+            </div>
+            <%= form.button "<i class='fa fa-search'></i>".html_safe, class: "btn btn-primary" %>
+          <% end %>
+
           <li><%= link_to 'Full Admin Dashboard', '/admin' %></li>
           <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
           <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>

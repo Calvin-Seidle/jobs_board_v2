@@ -14,7 +14,7 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><a href="</a> <%= job.job_link %>"><%= job.job_link %></a> </td>
+        <td><a href="<%= job.job_link %>" target="_blank" ><%= job.job_link %></a> </td>
         <td><%= job.job_name %></td>
         <td><%= job.company_name %></td>
         <td><%= job.job_description %></td>
