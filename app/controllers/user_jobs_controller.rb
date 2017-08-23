@@ -1,6 +1,6 @@
 class UserJobsController < ApplicationController
   before_action :set_user_job, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /user_jobs
   # GET /user_jobs.json
   def index
@@ -26,6 +26,7 @@ class UserJobsController < ApplicationController
   # POST /user_jobs.json
   def create
     @user_job = UserJob.new(user_job_params)
+    # @user_job.result_id = '2'
 
     respond_to do |format|
       if @user_job.save

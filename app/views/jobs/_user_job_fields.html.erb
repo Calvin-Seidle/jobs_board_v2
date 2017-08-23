@@ -1,6 +1,7 @@
 <div class="nested-fields">
-	<%= link_to_remove_association 'Delete User Job', f, class: 'btn btn-xs btn-danger' %>
-	<%= f.association :user %>
+	<%= link_to_remove_association 'x', f, class: 'btn btn-xs btn-danger' %>
+	<%= f.association :user, label: false %>
+	<%= f.hidden_field :requirement_id, value: 2 %> 
 	<!-- <span><%= f.collection_select :user_id, User.all, :id, :name, prompt: true %></span> -->
 <!-- 	<div>
 	<%= f.association :job %>

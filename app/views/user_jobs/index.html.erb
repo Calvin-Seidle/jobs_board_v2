@@ -25,7 +25,15 @@
         <td><%=link_to user_job.job, jobs_path %></td>
         <td><%= user_job.result %></td>
         <td><%= user_job.requirement %></td>
-        <td><%= user_job.applied %></td>
+        <% if user_job.applied == true %>
+            <td>
+              <i class="fa fa-thumbs-up text-success"></i>
+            </td>
+          <% else %>
+            <td>
+              <i class="fa fa-thumbs-down text-danger"></i>
+            </td>
+        <% end %>
         <td><%= user_job.interview %></td>
         <td><%= user_job.shortlist %></td>
         <td><%= user_job.final %></td>
