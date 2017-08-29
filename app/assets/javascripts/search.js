@@ -14,6 +14,10 @@ document.addEventListener("turbolinks:load", function () {
 			{
 				listLocation: "jobs",
 				header: "--<strong>Jobs<strong>--",
+			},
+			{
+				listLocation: "companies",
+				header: "--<strong>Company<strong>--",
 			}
 		],
 		list: {

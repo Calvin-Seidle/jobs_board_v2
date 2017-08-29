@@ -1,25 +1,45 @@
-<h1>Results</h1>
+<h1>Job <small>Results</small></h1><hr>
 
-<table class='table table-striped table-hover'>
-  <thead>
-    <tr>
-      <th>Result</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @results.each do |result| %>
+  <% if result.id == 1 %> 
+    <center>
+      <div class="col-md-4 col-xs-12">
+          <div class="panel panel-success" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <div class="panel-heading">
+                <h2><%= result.result %></h2>
+              </div>
+              <div class="panel-body">
+                <%= link_to 'Show', result %>
+              </div>
+          </div>
+      </div>
+    </center>
+  <% elsif result.id == 2 %>
+    <center>
+      <div class="col-md-4 col-xs-12">
+          <div class="panel panel-warning" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <div class="panel-heading">
+                <h2><%= result.result %></h2>
+              </div>
+              <div class="panel-body">
+                <%= link_to 'Show', result %>
+              </div>
+          </div>
+      </div>
+    </center>
+  <% else %>
+    <center>
+      <div class="col-md-4 col-xs-12">
+          <div class="panel panel-danger" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <div class="panel-heading">
+                <h2><%= result.result %></h2>
+              </div>
+              <div class="panel-body">
+                <%= link_to 'Show', result %>
+              </div>
+          </div>
+      </div>
+    </center> 
 
-  <tbody>
-    <% @results.each do |result| %>
-      <tr>
-        <td><%= result.result %></td>
-        <td><%= link_to 'Show', result %></td>
-        <!-- <td><%= link_to 'Edit', edit_result_path(result) %></td>
-        <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Result', new_result_path %>
+  <% end %>
+<% end %>

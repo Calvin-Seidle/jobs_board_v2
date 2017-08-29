@@ -1,5 +1,5 @@
 <h1><%= @user.name %> <%= @user.surname %></h1><hr>
-
+<% if @user.user_jobs.any? %>
 <table class="table table-hover table-striped">
   <thead>
     <tr>
@@ -37,3 +37,6 @@
     <% end %>
   </tbody>
 </table>
+<% else %>
+  <h3 class="text-danger">No jobs have been sent to <%= @user.name %> <%= @user.surname %> yet!</h3>
+<% end %>

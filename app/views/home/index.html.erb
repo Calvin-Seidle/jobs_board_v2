@@ -1,3 +1,20 @@
-<h1 class="text-center">Welcome</h1><hr>
+<style type="text/css">
+body { 
+    background: 
+    linear-gradient(
+      rgba(0,0,0, 0.5),
+      rgba(0,0,0, 0.5)),  
+    url("../cover.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+.white {
+	color: #ffffff;
+} 
 
-<strong><h4 class="text-center">Please <%= link_to "log in", new_user_session_url %> or <%= link_to "sign up", new_user_registration_url %>  to continue </h4></strong>
+</style>
+<h1 class="text-center white">Welcome</h1><br><br>
+
+<h3 class="text-center white">Please <%= link_to "Log In", new_user_session_url %> or <%= link_to "Register", new_user_registration_url %>  to continue </h3>

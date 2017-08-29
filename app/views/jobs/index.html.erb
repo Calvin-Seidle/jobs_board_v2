@@ -1,5 +1,7 @@
-<h1>Jobs</h1>
+<h1>Jobs (<%= @jobs.count %>)</h1><hr>
 
+<%= link_to 'New Job', new_job_path, id: 'new_link', remote:true %><hr>
+<div id='jobs'>
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -18,15 +20,18 @@
         <td><%= job.job_name %></td>
         <td><%= job.company_name %></td>
         <td><%= job.job_description %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', job, class: 'btn btn-xs btn-info' %></td>
+        <td><%= link_to 'Edit', edit_job_path(job), class: 'btn btn-xs btn-warning' %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+<hr>
 
-<br>
-
-<%= link_to 'New Job', new_job_path %>
-
+<div class="col-md-12 col-xs-12">
+    <center>
+        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+    </center>
+</div>

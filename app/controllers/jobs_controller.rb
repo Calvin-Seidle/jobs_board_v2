@@ -4,7 +4,8 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.paginate(:page => params[:page], :per_page => 20).order('created_at ASC')
+    @job = Job.new
   end
 
   # GET /jobs/1
@@ -34,6 +35,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
+        # format.js
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
         format.json { render :show, status: :created, location: @job }
       else

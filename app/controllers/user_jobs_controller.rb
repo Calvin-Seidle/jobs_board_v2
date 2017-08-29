@@ -16,6 +16,7 @@ class UserJobsController < ApplicationController
   # GET /user_jobs/new
   def new
     @user_job = UserJob.new
+    #@requirement = Requirement.find(params[:user_jobs])
   end
 
   # GET /user_jobs/1/edit
@@ -30,6 +31,7 @@ class UserJobsController < ApplicationController
 
     respond_to do |format|
       if @user_job.save
+        JobMailer.jobs(@user).deliver
         format.html { redirect_to @user_job, notice: 'User job was successfully created.' }
         format.json { render :show, status: :created, location: @user_job }
       else

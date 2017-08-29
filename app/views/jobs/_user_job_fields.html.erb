@@ -1,16 +1,4 @@
 <div class="nested-fields">
 	<%= link_to_remove_association 'x', f, class: 'btn btn-xs btn-danger' %>
-	<%= f.association :user, label: false %>
-	<%= f.hidden_field :requirement_id, value: 2 %> 
-	<!-- <span><%= f.collection_select :user_id, User.all, :id, :name, prompt: true %></span> -->
-<!-- 	<div>
-	<%= f.association :job %>
-	<%= f.association :result %>
-	<%= f.association :requirement %>
-	<%= f.input :applied, as: :boolean %>
-	<%= f.input :interview, as: :boolean %>
-	<%= f.input :shortlist, as: :boolean %>
-	<%= f.input :final, as: :boolean %>
-	<%= f.input :reason %>
-	</div> -->
+	<%= f.association :user, label: false %>	
 </div>

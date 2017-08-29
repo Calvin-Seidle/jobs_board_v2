@@ -1,6 +1,6 @@
-<%= simple_form_for(@job) do |f| %>
+<%= simple_form_for @job, remote:true do |f| %>
   <%= f.error_notification %>
-
+  <%= link_to 'x', '#', id: 'close', class: 'btn btn-xs btn-danger', style: "float: right;" %>
   <div class="form-inputs">
     <%= f.input :job_name %>
     <%= f.input :job_link %>
@@ -22,4 +22,8 @@
   </div>
 <% end %>
 
-
+<script type="text/javascript">
+  $("#close").click(function(){
+    $("user_jobs").hide();
+});
+</script>

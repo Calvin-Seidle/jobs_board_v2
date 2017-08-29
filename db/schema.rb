@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821123241) do
+ActiveRecord::Schema.define(version: 20170828064222) do
 
-  create_table "jobs", force: :cascade do |t|
+  create_table "jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "job_link"
     t.string "job_name"
     t.string "company_name"
-    t.string "job_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "job_description"
   end
 
-  create_table "requirements", force: :cascade do |t|
+  create_table "requirements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "requirement"
     t.integer "job_id"
     t.datetime "created_at", null: false
@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20170821123241) do
     t.index ["job_id"], name: "index_requirements_on_job_id"
   end
 
-  create_table "results", force: :cascade do |t|
+  create_table "results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_jobs", force: :cascade do |t|
+  create_table "user_jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.integer "job_id"
     t.integer "result_id"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20170821123241) do
     t.index ["user_id"], name: "index_user_jobs_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "admin"
     t.string "name"
     t.string "surname"

@@ -17,6 +17,7 @@ gem 'faker'
 gem 'ransack'
 gem 'will_paginate-bootstrap'
 gem 'will_paginate'
+gem 'roadie', '~> 3.2'
 
 gem 'jquery-rails'
 gem 'rails', '~> 5.1.3'

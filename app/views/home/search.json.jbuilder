@@ -11,3 +11,24 @@ json.jobs do
 		json.url job_path(job)
 	end
 end
+
+json.requirements do 
+	json.array!(@requirements) do |requirement|
+		json.name requirement.requirement
+		json.url requirement_path(requirement)
+	end
+end
+
+json.requirements do 
+	json.array!(@requirements) do |requirement|
+		json.name requirement.requirement
+		json.url requirement_path(requirement)
+	end
+end
+
+json.companies do 
+	json.array!(@companies) do |company|
+		json.name company.company_name
+		json.url job_path(company)
+	end
+end
